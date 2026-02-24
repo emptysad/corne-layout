@@ -24,6 +24,12 @@
         input-processors = <&zip_xy_scaler 2 1>;  // Умножает скорость на 2
     };
 };
+&msc_input_listener {
+    set_scroll_fast {
+        layers = <5>;
+        input-processors = <&zip_xy_scaler 2 1>;
+    };
+};
 
 / {
     combos {
