@@ -18,6 +18,16 @@
 #define U_MOUSE_MOVE_TIME 200
 #define U_MOUSE_MOVE_DELAY 0
 
+/ {
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+        track-remainders;
+    };
+};
+
 &mmv_input_listener {
     set_mouse_fast {
         layers = <5>;
